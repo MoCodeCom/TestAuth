@@ -1,0 +1,24 @@
+div{
+    background-color: gainsboro;
+    display: flex;
+    justify-content: space-around;
+}
+div ul{
+    display: flex;
+}
+
+div ul li{
+    list-style-type: none;
+}
+
+div ul li a{
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0px;
+    padding:10px 20px;
+}
+
+div ul li a:hover{
+    border: solid 2px blue;
+
+}

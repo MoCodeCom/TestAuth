@@ -1,0 +1,40 @@
+<p>home works!</p>
+
+<div id="comments">
+    <div>
+        <button id="#submitBtn" (click)="reportPg()">Report</button>
+    </div>
+    <form
+       #formComment = "ngForm"
+       (ngSubmit)="onSubmitForm(formComment)"
+    >
+        <div>
+            <label for="title">Tile</label><br>
+            <input 
+               ngModel
+               name="title"
+               type="text"
+               required
+            />
+        </div>
+        <div>
+            <label for="content">Content</label><br>
+            <input 
+               ngModel
+               name="content"
+               type="text"
+               required
+               minlength="5"
+            />
+        </div>
+        <div>
+            <button 
+               id="submitBtn" 
+               type="submit" 
+               [disabled]="formComment.invalid"
+               [ngStyle]="formComment.invalid?{'background-color':'gray'}:{}">Submit</button> | 
+            <button id="cancelBtn">Cancel</button>
+        </div>
+    </form>
+</div>
+<app-products></app-products>

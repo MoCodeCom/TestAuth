@@ -1,0 +1,46 @@
+#comments{
+    display: flex;
+    height: 400px;
+    width: 100%;
+    text-align:start;
+}
+
+#comments form{
+    align-self: center;
+    border: solid 2px rgb(0, 0, 146);
+    padding: 10px;
+    margin: auto 35% auto 35%;
+    width: 35%;
+}
+
+#comments form div{
+    margin: 10px auto 10px auto;
+    padding:5px
+}
+
+#comments form div input{
+    width: 100%;
+}
+
+#comments form div button{
+    width: 100px;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+#comments form div button:hover{
+    border: solid 2px black;
+}
+
+#submitBtn{
+    background-color: rgb(51, 138, 51);
+    color: beige;
+}
+
+#cancelBtn{
+    background-color:  rgb(171, 47, 47);
+    color: beige;
+}
+
+
+

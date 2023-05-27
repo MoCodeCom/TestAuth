@@ -1,0 +1,21 @@
+<h3>report for comments</h3>
+<div>
+    <button 
+       (click)="OnDeleteAll()"
+       id="deleteAllBtn"
+       >Delete All</button>
+</div>
+<app-loading *ngIf="isLoading || dataList.length <= 0"></app-loading>
+<div>
+    <p *ngIf="dataList.length <= 0"> No data users available!</p>
+    <div *ngIf="dataList.length >= 1 && !loadingUserData">
+        <h4 *ngFor="let i of dataList">{{i.title}}  : {{i.content}} : {{i.id}}</h4>
+    </div>
+    <p *ngIf="loadingUserData && errorHandel == true">loading ...</p>
+    <div
+        *ngIf="error"  
+        style="background-color: rgb(229, 114, 114); color: beige;">
+        <p>{{error}}</p>
+       <button (click)="OnErrorHandle()" style="background-color: brown; color: beige;">Okey</button>
+    </div>
+</div>
